@@ -1,0 +1,7 @@
+state/
+__pycache__/
+*.pyc
+*.key
+server_hmac.key
+.verifiable_memory/
+campaign/

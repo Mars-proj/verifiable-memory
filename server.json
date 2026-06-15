@@ -1,0 +1,14 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-29/server.schema.json",
+  "name": "io.github.mars-proj/verifiable-memory",
+  "description": "Verifiable memory for AI agents: 0% hallucination, cited answers or honest abstention, provable forgetting, valid-time, Merkle proofs, deterministic. CPU-only.",
+  "version": "0.1.0",
+  "packages": [
+    {
+      "registryType": "pypi",
+      "identifier": "verifiable-memory-mcp",
+      "version": "0.1.0",
+      "transport": {"type": "stdio"}
+    }
+  ]
+}

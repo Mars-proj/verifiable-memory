@@ -1,0 +1,51 @@
+{
+  "facts": 6000,
+  "queries_each": 500,
+  "OURS": {
+    "known_coverage_%": 100.0,
+    "known_acc_when_answered_%": 100.0,
+    "trap_fabrication_%": 0.0,
+    "cited": "100% (every answer carries source)",
+    "forgettable": true,
+    "deterministic": true
+  },
+  "RAG_retriever_sweep": [
+    {
+      "tau": 0.0,
+      "known_coverage_%": 100.0,
+      "known_acc_when_answered_%": 100.0,
+      "trap_fabrication_%": 100.0
+    },
+    {
+      "tau": 0.2,
+      "known_coverage_%": 100.0,
+      "known_acc_when_answered_%": 100.0,
+      "trap_fabrication_%": 12.4
+    },
+    {
+      "tau": 0.34,
+      "known_coverage_%": 100.0,
+      "known_acc_when_answered_%": 100.0,
+      "trap_fabrication_%": 0.6
+    },
+    {
+      "tau": 0.5,
+      "known_coverage_%": 100.0,
+      "known_acc_when_answered_%": 100.0,
+      "trap_fabrication_%": 0.0
+    },
+    {
+      "tau": 0.7,
+      "known_coverage_%": 100.0,
+      "known_acc_when_answered_%": 100.0,
+      "trap_fabrication_%": 0.0
+    },
+    {
+      "tau": 1.0,
+      "known_coverage_%": 100.0,
+      "known_acc_when_answered_%": 100.0,
+      "trap_fabrication_%": 0.0
+    }
+  ],
+  "llm_reader": "skipped (ollama/model not available on this host)"
+}

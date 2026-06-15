@@ -1,0 +1,27 @@
+{
+  "facts_ingested": 3000,
+  "ingest_facts_per_sec": 150887,
+  "known": {
+    "queried": 1500,
+    "answered": 1500,
+    "accuracy_when_answered_%": 100.0,
+    "citation_coverage_%": 100.0,
+    "avg_query_ms": 0.008
+  },
+  "trap": {
+    "queried": 1500,
+    "ours_hallucination_rate_%": 0.0,
+    "baseline_guesser_fabrication_rate_%": 100.0
+  },
+  "determinism_1000x_identical": true,
+  "forget": {
+    "fact": [
+      "00003553",
+      "_derivationally_related_form"
+    ],
+    "deleted_versions": 1,
+    "recall_before": true,
+    "recall_after_abstains": true,
+    "root_changed_by_forget": true
+  }
+}

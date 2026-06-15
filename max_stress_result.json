@@ -1,0 +1,49 @@
+{
+  "scale_sweep": [
+    {
+      "facts": 100000,
+      "ingest_per_sec": 117713,
+      "RAM_total_MB": 137,
+      "bytes_per_fact": 1269,
+      "known_acc_%": 100.0,
+      "query_us_p50": 4.31,
+      "query_us_p99": 14.86,
+      "adversarial_trap_hallucination_%": 0.0,
+      "forget_ok": true
+    },
+    {
+      "facts": 300000,
+      "ingest_per_sec": 98398,
+      "RAM_total_MB": 359,
+      "bytes_per_fact": 1094,
+      "known_acc_%": 100.0,
+      "query_us_p50": 4.54,
+      "query_us_p99": 13.91,
+      "adversarial_trap_hallucination_%": 0.0,
+      "forget_ok": true
+    },
+    {
+      "facts": 600000,
+      "ingest_per_sec": 103683,
+      "RAM_total_MB": 691,
+      "bytes_per_fact": 1054,
+      "known_acc_%": 100.0,
+      "query_us_p50": 4.53,
+      "query_us_p99": 16.33,
+      "adversarial_trap_hallucination_%": 0.0,
+      "forget_ok": true
+    },
+    {
+      "facts": 1000000,
+      "ingest_per_sec": 98984,
+      "RAM_total_MB": 1203,
+      "bytes_per_fact": 1058,
+      "known_acc_%": 100.0,
+      "query_us_p50": 4.41,
+      "query_us_p99": 14.11,
+      "adversarial_trap_hallucination_%": 0.0,
+      "forget_ok": true
+    }
+  ],
+  "concurrency_qps": 136986
+}
