@@ -1,5 +1,7 @@
 # verifiable-memory
 
+<!-- mcp-name: io.github.Mars-proj/verifiable-memory -->
+
 **Memory for AI agents that cannot hallucinate.**
 It answers *only* from stored facts — with the source cited — or it honestly says **"I don't know."** Every guarantee below is cryptographic or true by construction, not a prompt trick.
 

@@ -1,14 +1,16 @@
 {
-  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-29/server.schema.json",
-  "name": "io.github.mars-proj/verifiable-memory",
-  "description": "Verifiable memory for AI agents: 0% hallucination, cited answers or honest abstention, provable forgetting, valid-time, Merkle proofs, deterministic. CPU-only.",
-  "version": "0.1.0",
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.Mars-proj/verifiable-memory",
+  "description": "Memory for AI agents that can't hallucinate — cited or abstains, provable forget, deterministic.",
+  "version": "0.1.1",
   "packages": [
     {
       "registryType": "pypi",
       "identifier": "verifiable-memory-mcp",
-      "version": "0.1.0",
-      "transport": {"type": "stdio"}
+      "version": "0.1.1",
+      "transport": {
+        "type": "stdio"
+      }
     }
   ]
 }

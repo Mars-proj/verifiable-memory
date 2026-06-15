@@ -4,11 +4,10 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "verifiable-memory-mcp"
-version = "0.1.0"
+version = "0.1.1"
 description = "Verifiable memory for AI agents — 0% hallucination, cited, provably forgettable, deterministic. MCP server. CPU-only, no GPU, zero dependencies."
 readme = "README.md"
 requires-python = ">=3.8"
-license = {text = "MIT"}
 authors = [{name = "Sergey", email = "svobodg@gmail.com"}]
 keywords = ["mcp", "llm", "ai-agents", "hallucination", "memory", "rag", "verifiable", "knowledge-graph"]
 classifiers = ["Programming Language :: Python :: 3", "License :: OSI Approved :: MIT License"]
@@ -19,3 +18,4 @@ verifiable-memory = "vmem.server:main"
 
 [tool.setuptools]
 packages = ["vmem"]
+license-files = []
