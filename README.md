@@ -8,6 +8,7 @@ It answers *only* from stored facts — with the source cited — or it honestly
 ![deps](https://img.shields.io/badge/dependencies-zero-success)
 ![license](https://img.shields.io/badge/license-MIT-black)
 ![protocol](https://img.shields.io/badge/MCP-stdio-purple)
+![pypi](https://img.shields.io/pypi/v/verifiable-memory-mcp)
 
 > An MCP server + Python SDK. Plug it into any agent (Claude Desktop/Code, LangChain, custom). The LLM phrases; this layer guarantees the facts.
 
@@ -41,7 +42,7 @@ vs a naive "always answer" baseline: **0% vs 100% fabrication** on the same trap
 
 ## Install
 ```bash
-pip install verifiable-memory-mcp     # (publishing soon)
+pip install verifiable-memory-mcp
 verifiable-memory                     # MCP server over stdio
 # from source:
 git clone https://github.com/Mars-proj/verifiable-memory && cd verifiable-memory
