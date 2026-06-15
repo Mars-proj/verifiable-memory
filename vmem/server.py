@@ -133,17 +133,17 @@ def t_stats(a):
             "state_dir": STATE_DIR}
 
 TOOLS = {
- "learn_fact": (t_learn_fact, "Store a fact (subject, relation, object) with an optional source/provenance. Optionally valid_from (number) for valid-time.",
+ "learn_fact": (t_learn_fact, "Store a fact (subject, relation, object) the agent must recall EXACTLY later, with its source. Call whenever the user states a fact, preference, decision, name, number, or rule worth remembering — it persists across sessions and is never silently distorted. Optional valid_from for valid-time.",
    {"type":"object","properties":{"subject":{"type":"string"},"relation":{"type":"string"},"object":{"type":"string"},"source":{"type":"string"},"valid_from":{"type":"number"}},"required":["subject","relation","object"]}),
- "recall": (t_recall, "Recall the object(s) for (subject, relation). Returns answer + cited source, or honestly abstains if unknown (0% hallucination). Includes a signed receipt. Optional as_of (number) for valid-time.",
+ "recall": (t_recall, "Look up a stored fact and return the answer WITH its cited source — or an honest 'unknown'. ALWAYS call this before answering a factual or memory question instead of guessing: it returns nothing rather than hallucinating, and includes a signed, verifiable receipt. Optional as_of for valid-time.",
    {"type":"object","properties":{"subject":{"type":"string"},"relation":{"type":"string"},"as_of":{"type":"number"}},"required":["subject","relation"]}),
  "update_fact": (t_update_fact, "Update a fact's value without retraining: closes live versions (valid_to=t) and opens a new one. History is preserved.",
    {"type":"object","properties":{"subject":{"type":"string"},"relation":{"type":"string"},"new_object":{"type":"string"},"source":{"type":"string"},"t":{"type":"number"}},"required":["subject","relation","new_object"]}),
  "history": (t_history, "Full life-line of a fact (all versions live+closed, with sources and valid-time). Audit/compliance.",
    {"type":"object","properties":{"subject":{"type":"string"},"relation":{"type":"string"}},"required":["subject","relation"]}),
- "forget": (t_forget, "Provably delete a fact (right-to-be-forgotten): removed from memory+index entirely; returns a signed proof-of-deletion. object optional (omit to delete all values).",
+ "forget": (t_forget, "Permanently and PROVABLY delete a stored fact (GDPR / right-to-be-forgotten). Use when the user asks to forget or remove information — the fact is fully erased and you get a signed proof of deletion. object optional (omit to delete all values).",
    {"type":"object","properties":{"subject":{"type":"string"},"relation":{"type":"string"},"object":{"type":"string"}},"required":["subject","relation"]}),
- "contradictions": (t_contradictions, "For functional relations (one value expected, e.g. 'capital','birthdate') find any (subject,relation) with >1 live value, showing both sources.",
+ "contradictions": (t_contradictions, "Audit knowledge for conflicts: for functional relations (one value expected, e.g. 'capital','birthdate') return any (subject,relation) holding >1 live value, showing BOTH sources — call before trusting facts that may have been updated or come from multiple sources.",
    {"type":"object","properties":{"functional_relations":{"type":"array","items":{"type":"string"}}},"required":["functional_relations"]}),
  "knowledge_root": (t_knowledge_root, "Merkle root committing the entire current knowledge state (one hash).", {"type":"object","properties":{}}),
  "prove_fact": (t_prove_fact, "Merkle inclusion proof that a fact is in the knowledge state (without revealing other facts).",
